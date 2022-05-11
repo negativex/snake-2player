@@ -1,0 +1,11 @@
+C:\Users\NGOC\OneDrive - Trường ĐH CNTT - University of Information Technology\Máy tính\snake-maste(1)\snake-master\SServer\bin\Debug\SServer.exe.config
+C:\Users\NGOC\OneDrive - Trường ĐH CNTT - University of Information Technology\Máy tính\snake-maste(1)\snake-master\SServer\bin\Debug\SServer.exe
+C:\Users\NGOC\OneDrive - Trường ĐH CNTT - University of Information Technology\Máy tính\snake-maste(1)\snake-master\SServer\bin\Debug\SServer.pdb
+C:\Users\NGOC\OneDrive - Trường ĐH CNTT - University of Information Technology\Máy tính\snake-maste(1)\snake-master\SServer\obj\Debug\SServer.csproj.AssemblyReference.cache
+C:\Users\NGOC\OneDrive - Trường ĐH CNTT - University of Information Technology\Máy tính\snake-maste(1)\snake-master\SServer\obj\Debug\SServer.csproj.SuggestedBindingRedirects.cache
+C:\Users\NGOC\OneDrive - Trường ĐH CNTT - University of Information Technology\Máy tính\snake-maste(1)\snake-master\SServer\obj\Debug\SServer.Server.resources
+C:\Users\NGOC\OneDrive - Trường ĐH CNTT - University of Information Technology\Máy tính\snake-maste(1)\snake-master\SServer\obj\Debug\SServer.Properties.Resources.resources
+C:\Users\NGOC\OneDrive - Trường ĐH CNTT - University of Information Technology\Máy tính\snake-maste(1)\snake-master\SServer\obj\Debug\SServer.csproj.GenerateResource.cache
+C:\Users\NGOC\OneDrive - Trường ĐH CNTT - University of Information Technology\Máy tính\snake-maste(1)\snake-master\SServer\obj\Debug\SServer.csproj.CoreCompileInputs.cache
+C:\Users\NGOC\OneDrive - Trường ĐH CNTT - University of Information Technology\Máy tính\snake-maste(1)\snake-master\SServer\obj\Debug\SServer.exe
+C:\Users\NGOC\OneDrive - Trường ĐH CNTT - University of Information Technology\Máy tính\snake-maste(1)\snake-master\SServer\obj\Debug\SServer.pdb
