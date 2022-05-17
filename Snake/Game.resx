@@ -267,9 +267,6 @@
   <data name="&gt;&gt;lblScore.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <metadata name="tmrGameSpeed.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="lblGameOver.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -554,12 +551,6 @@
   </data>
   <data name="&gt;&gt;aboutToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tmrGameSpeed.Name" xml:space="preserve">
-    <value>tmrGameSpeed</value>
-  </data>
-  <data name="&gt;&gt;tmrGameSpeed.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tmrTimer.Name" xml:space="preserve">
     <value>tmrTimer</value>

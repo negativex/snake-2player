@@ -39,7 +39,6 @@
             this.picCanvas = new System.Windows.Forms.PictureBox();
             this.lblLScore = new System.Windows.Forms.Label();
             this.lblScore = new System.Windows.Forms.Label();
-            this.tmrGameSpeed = new System.Windows.Forms.Timer(this.components);
             this.lblGameOver = new System.Windows.Forms.Label();
             this.btnPlay = new System.Windows.Forms.Button();
             this.lblTimer = new System.Windows.Forms.Label();
@@ -171,8 +170,8 @@
             this.MainMenuStrip = this.mnuMenu;
             this.Name = "frmGame";
             this.Load += new System.EventHandler(this.frmGame_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmGame_KeyDown);
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.frmGame_KeyUp);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmGame_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FrmGame_KeyUp);
             this.mnuMenu.ResumeLayout(false);
             this.mnuMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCanvas)).EndInit();
@@ -193,7 +192,6 @@
         private System.Windows.Forms.PictureBox picCanvas;
         private System.Windows.Forms.Label lblLScore;
         private System.Windows.Forms.Label lblScore;
-        private System.Windows.Forms.Timer tmrGameSpeed;
         private System.Windows.Forms.Label lblGameOver;
         private System.Windows.Forms.Button btnPlay;
         private System.Windows.Forms.Label lblTimer;

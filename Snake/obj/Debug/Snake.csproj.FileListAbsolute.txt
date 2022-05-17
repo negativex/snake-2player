@@ -18,4 +18,4 @@ C:\Users\NGOC\OneDrive - Trường ĐH CNTT - University of Information Technolo
 C:\Users\NGOC\OneDrive - Trường ĐH CNTT - University of Information Technology\Máy tính\snake-maste(1)\snake-master\Snake\obj\Debug\Snake.csproj.CoreCompileInputs.cache
 C:\Users\NGOC\OneDrive - Trường ĐH CNTT - University of Information Technology\Máy tính\snake-maste(1)\snake-master\Snake\obj\Debug\Snake.exe
 C:\Users\NGOC\OneDrive - Trường ĐH CNTT - University of Information Technology\Máy tính\snake-maste(1)\snake-master\Snake\obj\Debug\Snake.pdb
-C:\Users\NGOC\OneDrive - Trường ĐH CNTT - University of Information Technology\Máy tính\snake-maste(1)\snake-master\Snake\obj\Debug\Snake.Open.resources
+C:\Users\NGOC\OneDrive - Trường ĐH CNTT - University of Information Technology\Máy tính\snake-maste(1)\snake-master\Snake\obj\Debug\Snake.OpenForm.resources

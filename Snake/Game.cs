@@ -17,6 +17,9 @@ namespace Snake
         private List<Circle> snake2 = new List<Circle>();
         // food are circles.
         private Circle food = new Circle();
+        private int playtime = 0;
+        private int Pl_num = PVP.pl_num_pvp;
+        private string Pl_name = PVP.pl_name_pvp;
 
         public frmGame()
         {
@@ -25,6 +28,12 @@ namespace Snake
 
         private void startGame()
         {
+            
+            if (playtime == 0)
+            {
+                PVP.Startnetwork();
+                playtime++;
+            }
             // disable the controls.
             lblGameOver.Visible = false;
             btnPlay.Enabled = false;
@@ -34,17 +43,25 @@ namespace Snake
             new SettingsP2();
             // set game timer.
             tmrTimer.Interval = 1000 / Settings.speed;
-            tmrTimer2.Interval = 1000 / Settings.speed;
             tmrTimer.Tick += updateScreen;
-            tmrTimer2.Tick += updateScreen2;
             tmrTimer.Start();
-            tmrTimer2.Start();
             // remove the whole snake.
             snake.Clear();
             snake2.Clear();
             // create the snake head node.
-            Circle snakeHead = new Circle() { x = 6, y = 10 };
-            Circle snakeHead2 = new Circle() { x = 18, y = 10 };
+            Circle snakeHead = new Circle();
+            Circle snakeHead2 = new Circle();
+            if (Pl_num == 1)
+            {
+                snakeHead = new Circle() { x = 6, y = 10 };
+                snakeHead2 = new Circle() { x = 18, y = 10 };
+            }
+            else if (Pl_num == 2)
+            {
+
+                snakeHead2 = new Circle() { x = 6, y = 10 };
+                snakeHead = new Circle() { x = 18, y = 10 };
+            }
             // add the head to the body.
             snake.Add(snakeHead);
             snake2.Add(snakeHead2);
@@ -80,24 +97,30 @@ namespace Snake
                 Settings.duration += 1;
 
                 if (Input.KeyPressed(Keys.D) && Settings.direction != Direction.Left)
+                {
                     Settings.direction = Direction.Right;
+                    PVP.sendinnw();
+                }
                 else if (Input.KeyPressed(Keys.A) && Settings.direction != Direction.Right)
+                {
                     Settings.direction = Direction.Left;
+                    PVP.sendinnw();
+                }
                 else if (Input.KeyPressed(Keys.W) && Settings.direction != Direction.Down)
+                {
                     Settings.direction = Direction.Up;
+                    PVP.sendinnw();
+                }
                 else if (Input.KeyPressed(Keys.S) && Settings.direction != Direction.Up)
+                {
                     Settings.direction = Direction.Down;
+                    PVP.sendinnw();
+                }
 
                 movePlayer();
                 lblTimer.Text = TimeSpan.FromSeconds(Settings.duration / Settings.speed).ToString();
                 lblScore.Text = Settings.score.ToString();
             }
-
-            picCanvas.Refresh();
-        }
-        private void updateScreen2(object sender, EventArgs e)
-        {
-            // check for game over.
             if (SettingsP2.gameOver)
             {
                 // check if Enter is pressed.
@@ -124,6 +147,7 @@ namespace Snake
 
             picCanvas.Refresh();
         }
+        
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -135,8 +159,9 @@ namespace Snake
 
             if (Settings.gameOver)
             {
-                string msg = "Ket thuc,\nDiem cua nguoi choi 1 la: " + Settings.score + "." + "\nDiem cua nguoi choi 2 la: " +SettingsP2.score + ".";
+                string msg = "Ket thuc,\nDiem cua " + Pl_name +" la: " + Settings.score + "." + "\nDiem cua nguoi choi 2 la: " +SettingsP2.score + ".";
                 msg += "\nNhan Enter de choi lai.";
+                PVP.endgame();
                 lblGameOver.Text = msg;
                 lblGameOver.Visible = true;
             }
@@ -335,18 +360,17 @@ namespace Snake
         {
             Settings.gameOver = true;
             tmrTimer.Tick -= updateScreen;
-            tmrTimer2.Tick -= updateScreen2;
             tmrTimer.Stop();
-            tmrTimer2.Stop();
             btnPlay.Enabled = true;
+            btnPlay.Text = "Retry";
         }
 
-        private void frmGame_KeyDown(object sender, KeyEventArgs e)
+        private void FrmGame_KeyDown(object sender, KeyEventArgs e)
         {
             Input.ChangeState(e.KeyCode, true);
         }
 
-        private void frmGame_KeyUp(object sender, KeyEventArgs e)
+        private void FrmGame_KeyUp(object sender, KeyEventArgs e)
         {
             Input.ChangeState(e.KeyCode, false);
         }
@@ -359,9 +383,8 @@ namespace Snake
 
         private void frmGame_Load(object sender, EventArgs e)
         {
-            btnPlay.Text = "Retry";
+            btnPlay.Text = "Start";
             tmrTimer.Enabled = false;
-            tmrTimer2.Enabled = false; 
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
